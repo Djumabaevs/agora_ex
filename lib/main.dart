@@ -1,3 +1,4 @@
+import 'package:agora_ex/chat/chat.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -23,6 +24,7 @@ class App extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.black),
         ),
       ),
+      home: const ChatScreen(),
     );
   }
 }
