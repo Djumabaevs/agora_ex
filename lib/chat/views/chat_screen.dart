@@ -1,3 +1,4 @@
+import 'package:agora_ex/chat/widgets/message_bubble.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -19,3 +20,26 @@ class ChatScreen extends StatelessWidget {
     );
   }
 }
+
+const _messages = <MessageBubble>[
+  MessageBubble(
+    profileImageUrl:
+        'https://images.unsplash.com/photo-1650419743194-c28ccbbcb7b8',
+    message: 'This app would be perfect if it had video chat',
+    date: 'Apr 22, 8:59 PM',
+  ),
+  MessageBubble(
+    message: 'This app would be perfect if it had video chat',
+    date: 'Apr 22, 9:59 PM',
+  ),
+  MessageBubble(
+    profileImageUrl:
+        'https://images.unsplash.com/photo-1650419743194-c28ccbbcb7b8',
+    message: 'This app would be perfect if it had video chat',
+    date: 'Apr 22, 10:59 PM',
+  ),
+  MessageBubble(
+    message: 'This app would be perfect if it had video chat',
+    date: 'Apr 22, 11:59 PM',
+  ),
+];
