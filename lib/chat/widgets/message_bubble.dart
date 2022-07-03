@@ -14,6 +14,12 @@ class MessageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final isReceiver = profileImageUrl != null;
+    return Row(
+      mainAxisAlignment:
+          isReceiver ? MainAxisAlignment.start : MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: const [],
+    );
   }
 }
