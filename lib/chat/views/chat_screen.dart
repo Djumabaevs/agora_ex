@@ -1,3 +1,4 @@
+import 'package:agora_ex/chat/views/video_call_screen.dart';
 import 'package:agora_ex/chat/widgets/message_bubble.dart';
 import 'package:agora_ex/chat/widgets/message_text_field.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,14 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Chat'),
+        actions: [
+          IconButton(
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => VideoCallScreen()),
+            ),
+            icon: const Icon(Icons.video_camera_front),
+          ),
+        ],
       ),
       body: Column(
         children: [
