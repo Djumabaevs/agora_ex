@@ -26,6 +26,33 @@ class _VideoCallScreenState extends State<VideoCallScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: const Text('Video Call'),
+        ),
+        body: SafeArea(
+          child: Stack(
+            children: [
+              AgoraVideoViewer(
+                client: _client,
+                layoutType: Layout.floating,
+                showNumberOfUsers: true,
+              ),
+              AgoraVideoButtons(
+                client: _client,
+                enabledButtons: const [
+                  BuiltInButtons.toggleCamera,
+                  BuiltInButtons.callEnd,
+                  BuiltInButtons.toggleMic,
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
