@@ -53,6 +53,7 @@ class MessageBubble extends StatelessWidget {
             ],
           ),
         ),
+        if (!isReceiver) const SizedBox(width: 12),
       ],
     );
   }
